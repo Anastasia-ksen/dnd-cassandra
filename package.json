@@ -12,6 +12,9 @@
   "dependencies": {
     "autoprefixer": "^9",
     "core-js": "^3.6.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.16",
+    "morgan": "^1.10.0",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue": "^2.6.11",
@@ -39,40 +42,5 @@
     "vue-loader": "^15.9.6",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^4.0.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/recommended",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "overrides": [
-      {
-        "files": [
-          "**/__tests__/*.{j,t}s?(x)",
-          "**/tests/unit/**/*.spec.{j,t}s?(x)"
-        ],
-        "env": {
-          "jest": true
-        }
-      }
-    ],
-    "rules": {
-      "vue/html-closing-bracket-spacing": "warn",
-      "vue/html-indent": "off",
-      "vue/html-quotes": "warn",
-      "vue/max-attributes-per-line": "warn"
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  }
 }
