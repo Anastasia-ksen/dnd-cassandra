@@ -40,5 +40,13 @@ module.exports = {
         }
     },
 
-    productionSourceMap: false
+    productionSourceMap: false,
+
+    css: {
+        loaderOptions: {
+            scss: {
+                additionalData: `@import "@/assets/scss/settings.scss";`
+            },
+        }
+    }
 }
