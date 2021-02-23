@@ -1,14 +1,14 @@
 <template lang="pug">
 div.component-tabs
-    //- div.component-tabs-list
-    div.component-tabs-list(
-        v-for='(tab, i) in tabs'
-        :key='tab.id || `tab_${i}`',
-        :id='tab.id',
-        :class='_getTabClass(tab)',
-        v-show='tab.isVisible',
-        @click='onSelectTab(i)'
-    ) {{tab.title}}
+    div.component-tabs-list
+        div.component-tabs-tab(
+            v-for='(tab, i) in tabs'
+            :key='tab.id || `tab_${i}`',
+            :id='tab.id',
+            :class='_getTabClass(tab)',
+            v-show='tab.isVisible',
+            @click='onSelectTab(i)'
+        ) {{tab.title}}
     div.component-tabs-panels
         slot
 </template>
@@ -32,9 +32,9 @@ export default {
     created() {
         this.tabs = this.$children
     },
-    mouted() {
+    mounted() {
         if (this.tabs.length > 0) {
-            this.onSelectTab(0)
+            this.onSelectTab(this.selectedIndex)
         }
     },
     methods: {

@@ -1,0 +1,28 @@
+//module: Base styles for Tabs ans Tab
+
+// Tabs
+.component-tabs {
+    margin: 3px;
+    padding: 10px;
+
+    .component-tabs-list {
+        display: flex;
+        flex-direction: row;
+
+        .component-tabs-tab {
+            margin-right: 5px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .component-tabs-panels {
+        margin-top: 5px;
+    }
+}
+
+// Tab
+.component-tab-panel {
+    box-shadow: -3px 1px 1px 0 grey;
+}

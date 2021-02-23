@@ -21,7 +21,7 @@ export default {
                 id => (!id || id.length <= MAX_ID_LEN) ? 'success' : 'danger'
             )
         },
-        isDisabled: {
+        'isDisabled': {
             type: Boolean,
             required: false,
             default: false

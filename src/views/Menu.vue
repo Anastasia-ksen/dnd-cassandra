@@ -4,7 +4,8 @@ Tabs
         v-for='tab in tabs'
         :key='tab.id'
         :title='tab.title'
-    ) {{tab.content}}
+    )
+        component(:is='tab.component')
 </template>
 
 <script>
@@ -14,23 +15,29 @@ export default {
     name: 'Menu',
     components: {
         Tabs,
-        Tab
+        Tab,
+        Icon: () => import('@/views/Icon'),
+        User: () => import('@/views/User')
     },
     data() {
         return {
             tabs: [
                 {
                     id: 'key-a',
-                    title: 'TTT',
-                    content: 'lalala'
+                    title: 'Icon',
+                    component: 'Icon'
                 },
                 {
                     id: 'key-b',
-                    title: 'BBB',
-                    content: 'next-content'
+                    title: 'User',
+                    component: 'User'
                 }
             ]
         }
     },
 }
 </script>
+
+<style lang="scss">
+@import '@/assets/scss/components/tabs/tabs.scss';
+</style>
