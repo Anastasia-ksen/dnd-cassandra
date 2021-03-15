@@ -44,9 +44,12 @@ module.exports = {
 
     css: {
         loaderOptions: {
-            scss: {
-                additionalData: `@import "@/assets/scss/settings.scss";`
-            },
+          scss: {
+            additionalData: '@import "@/assets/scss/settings.scss";'
+          },
+          sass: {
+            data: '@import "@/scss/settings.scss";'
+          }
         }
     }
 }

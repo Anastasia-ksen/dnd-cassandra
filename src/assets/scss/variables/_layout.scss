@@ -2,9 +2,27 @@
 $max-width: 1200px;
 $max-width-narrow: 720px;
 
-// Spacing
-$horizontal-padding-small: 30px;
-$horizontal-padding-medium: 60px;
+// Spacing horizontal
+$h-area-3xs: 4px;
+$h-area-xxs: 8px;
+$h-area-xs: 12px;
+$h-area-s: 24px;
+$h-area-m: 36px;
+$h-area-l: 48px;
+$h-area-xl: 60px;
+$h-area-xxl: 72px;
+$h-area-3xl: 84px;
+
+// Spacing vertical
+$v-area-3xs: 4px;
+$v-area-xxs: 8px;
+$v-area-xs: 12px;
+$v-area-s: 24px;
+$v-area-m: 36px;
+$v-area-l: 48px;
+$v-area-xl: 60px;
+$v-area-xxl: 72px;
+$v-area-3xl: 84px;
 
 // Containers
-$limit-width: $max-width + ($horizontal-padding-medium * 2);
+$limit-width: $max-width + ($h-area-m * 2);
