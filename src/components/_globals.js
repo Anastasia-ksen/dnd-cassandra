@@ -13,7 +13,8 @@ requireComponent.keys().forEach(fileName => {
     const componentName = upperFirst(
         camelCase(fileName.replace(/^\.\//, '').replace(/\.\w+$/, ''))
     )
+    console.log(componentName)
 
     // Register component globally
-    Vue.component(componentName, componentConfig.config || componentConfig)
+    Vue.component(componentName, componentConfig.default || componentConfig)
 })
