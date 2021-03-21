@@ -1,5 +1,5 @@
 <template lang="pug">
-MdButton(v-on='$listeners', v-bind='$attrs')
+button(v-on='$listeners', v-bind='$attrs')
     slot
 </template>
 
@@ -10,4 +10,5 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/assets/scss/views/buttons';
 </style>
