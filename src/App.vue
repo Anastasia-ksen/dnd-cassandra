@@ -1,22 +1,42 @@
 <template lang="pug">
 #app
-    Logo
-    //- div
-    //-     BaseButton.hl-button-primary(v-t='"controls.buttons.action"')
-    //-     MdButton(v-t='"controls.buttons.action"')
+    Background
+    MainHeader
+
+    main.hl-main
+
+    //- nav
+    //-     ul
+    //-         li {{ "NAV 1" }}
+    //-         li {{ "NAV 2" }}
+    //-         li {{ "NAV 3" }}
+
+//- 
+//- <div class="sidebar">
+//-         <aside>
+//-             <h1>Widget title</h1>
+//-             ...
+//-         </aside>
+//- </div>
+//- footer
 </template>
 
 <script>
-import Logo from '@/components/core/Logo'
+import MainHeader from '@/components/MainHeader'
+import Background from '@/components/Background'
 
 export default {
     name: 'App',
     components: {
-        Logo,
+        MainHeader,
+        Background,
     },
 }
 </script>
 
 <style lang="scss">
 @import '@/assets/scss/base';
+
+// .hl-main {
+// }
 </style>

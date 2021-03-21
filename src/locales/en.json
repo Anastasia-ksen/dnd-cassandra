@@ -8,5 +8,10 @@
     "img": {
       "logo": "It is just LOGO"
     }
+  },
+  "headers": {
+    "main": {
+      "title": "Complete \"Dungeon and Dragons\""
+    }
   }
 }
