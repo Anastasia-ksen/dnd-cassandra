@@ -1,23 +1,50 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-const path = require('path');
+// const path = require('path');
+// const http = require('http');
 
 const app = express();
 
 // configure server
-app.set('port', 3000);
+app.set('port', process.env.PORT || 3000);
+
+// set static dir
+app.use(express.static(__dirname + '/public'));
+
+// get root page
+app.get('/', (req, res) => {
+    res.type('text/plain');
+    res.render(`index.html`);
+});
+
+// пользовательская страница 404
+app.use((req, res) => {
+    res.type('text/plain')
+    res.status(404)
+    res.send('404 — Не найдено')
+});
+// пользовательская страница 500
+app.use((err, req, res, /* next */) => {
+    console.error(err.stack);
+    res.type('text/plain');
+    res.status(500);
+    res.send('500 — Ошибка сервера');
+});
 
 app.listen(app.get('port'), () => {
     console.log(`[OK] Server is running on localhost: ${app.get('port')}`);
 });
 
+
 // create connection to data base
-mongoose.connect('mongodb://localhost:27017/dnd', { useNewUrlParser: true })
-    // .then(db => {
-    //     console.log('[OK] DB is connected')
-    // })
-    // .catch(err => console.error(err));
+mongoose.connect(
+    'mongodb://localhost:27017/dnd', 
+    { 
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    }
+).catch(err => console.error(err));
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));

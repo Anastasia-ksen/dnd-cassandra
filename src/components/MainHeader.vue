@@ -2,6 +2,7 @@
 header.hl-main-header
     Logo
     h1(v-t='"headers.main.title"')
+    slot
 </template>
 
 <script>

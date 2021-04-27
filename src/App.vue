@@ -2,6 +2,11 @@
 #app
     Background
     MainHeader
+    
+    nav
+        router-link(to='table') {{'TEXT'}}
+                
+    //- router-view
 
     main.hl-main
 
