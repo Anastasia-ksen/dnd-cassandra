@@ -8,14 +8,13 @@
 
 <script>
 export default {
-    name: 'Form',
-    data() {
-        return {
-            userName: ''
-        }
+  name: 'Form',
+  data () {
+    return {
+      userName: ''
     }
+  }
 }
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

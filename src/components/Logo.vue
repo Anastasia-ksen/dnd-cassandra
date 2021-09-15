@@ -13,7 +13,7 @@ img.hl-simple-logo(
 
 <script>
 export default {
-    name: 'Logo',
+  name: 'Logo'
 }
 </script>
 

@@ -1,4 +1,4 @@
-<template lang='pug'>
+<template lang="pug">
 Tabs
     Tab(
         v-for='tab in tabs'
@@ -9,32 +9,32 @@ Tabs
 </template>
 
 <script>
-import {Tabs, Tab} from '@/components/core/tabs/index.js'
+import { Tabs, Tab } from '@/components/core/tabs/index.js'
 
 export default {
-    name: 'Menu',
-    components: {
-        Tabs,
-        Tab,
-        Icon: () => import('@/views/Icon'),
-        User: () => import('@/views/User')
-    },
-    data() {
-        return {
-            tabs: [
-                {
-                    id: 'key-a',
-                    title: 'Icon',
-                    component: 'Icon'
-                },
-                {
-                    id: 'key-b',
-                    title: 'User',
-                    component: 'User'
-                }
-            ]
+  name: 'Menu',
+  components: {
+    Tabs,
+    Tab,
+    Icon: () => import('@/views/Icon'),
+    User: () => import('@/views/User')
+  },
+  data () {
+    return {
+      tabs: [
+        {
+          id: 'key-a',
+          title: 'Icon',
+          component: 'Icon'
+        },
+        {
+          id: 'key-b',
+          title: 'User',
+          component: 'User'
         }
-    },
+      ]
+    }
+  }
 }
 </script>
 

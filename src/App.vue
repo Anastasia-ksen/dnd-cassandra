@@ -31,11 +31,11 @@ import MainHeader from '@/components/MainHeader'
 import Background from '@/components/Background'
 
 export default {
-    name: 'App',
-    components: {
-        MainHeader,
-        Background,
-    },
+  name: 'App',
+  components: {
+    MainHeader,
+    Background
+  }
 }
 </script>
 

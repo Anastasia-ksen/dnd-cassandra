@@ -1,63 +1,63 @@
 module.exports = {
-    assetsDir: 'out',
-    indexPath: 'index.html',
+  assetsDir: 'out',
+  indexPath: 'index.html',
 
-    pluginOptions: {
-        i18n: {
-            locale: 'en',
-            fallbackLocale: 'en',
-            localeDir: 'locales',
-            enableInSFC: false,
-        },
-    },
+  pluginOptions: {
+    i18n: {
+      locale: 'en',
+      fallbackLocale: 'en',
+      localeDir: 'locales',
+      enableInSFC: false
+    }
+  },
 
-    devServer: {},
+  devServer: {},
 
-    runtimeCompiler: true,
+  runtimeCompiler: true,
 
-    configureWebpack: {
-        module: {
-            rules: [
-                // {
-                //     test: /\.css$/,
-                //     use: [
-                //         'postcss-loader'
-                //     ]
-                // },
-                {
-                    test: /\.pug$/,
-                    oneOf: [
-                        {
-                            resourceQuery: /^\?vue/,
-                            use: ['pug-plain-loader'],
-                        },
-                        {
-                            use: ['raw-loader', 'pug-plain-loader'],
-                        },
-                    ],
-                },
-            ],
-        },
-    },
-
-    chainWebpack: config => {
-        config.plugin('html').tap(args => {
-            // change the title in index.html: htmlWebpackPlugin.options.title
-            args[0].title = 'Complete D&D'
-            return args
-        })
-    },
-
-    productionSourceMap: false,
-
-    css: {
-        loaderOptions: {
-            scss: {
-                additionalData: '@import "@/assets/scss/settings.scss";',
+  configureWebpack: {
+    module: {
+      rules: [
+        // {
+        //     test: /\.css$/,
+        //     use: [
+        //         'postcss-loader'
+        //     ]
+        // },
+        {
+          test: /\.pug$/,
+          oneOf: [
+            {
+              resourceQuery: /^\?vue/,
+              use: ['pug-plain-loader']
             },
-            sass: {
-                data: '@import "@/scss/settings.scss";',
-            },
-        },
-    },
+            {
+              use: ['raw-loader', 'pug-plain-loader']
+            }
+          ]
+        }
+      ]
+    }
+  },
+
+  chainWebpack: config => {
+    config.plugin('html').tap(args => {
+      // change the title in index.html: htmlWebpackPlugin.options.title
+      args[0].title = 'Complete D&D'
+      return args
+    })
+  },
+
+  productionSourceMap: false,
+
+  css: {
+    loaderOptions: {
+      scss: {
+        additionalData: '@import "@/assets/scss/settings.scss";'
+      },
+      sass: {
+        data: '@import "@/scss/settings.scss";'
+      }
+    }
+  }
 }

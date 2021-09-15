@@ -9,10 +9,10 @@ header.hl-main-header
 import Logo from '@/components/Logo'
 
 export default {
-    name: 'MainHeader',
-    components: {
-        Logo,
-    },
+  name: 'MainHeader',
+  components: {
+    Logo
+  }
 }
 </script>
 

@@ -4,12 +4,12 @@
       "action": "Действие"
     }
   },
-    "fallback": {
+  "fallback": {
     "img": {
       "logo": "Здесь есть LOGO"
     }
   },
-    "headers": {
+  "headers": {
     "main": {
       "title": "Complete \"Dungeon and Dragons\""
     }

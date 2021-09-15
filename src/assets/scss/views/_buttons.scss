@@ -1,26 +1,26 @@
 .hl-button-primary {
-    @include text-medium();
-    height: auto;
-    font-weight: 400;
-    position: relative;
-    height: auto;
-    margin: 0.3125rem 1px;
-    padding: $h-area-xxs $v-area-s;
-    text-transform: capitalize;
-    border-radius: 5px;
-    cursor: pointer;
+  @include text-medium();
+  height: auto;
+  font-weight: 400;
+  position: relative;
+  height: auto;
+  margin: 0.3125rem 1px;
+  padding: $h-area-xxs $v-area-s;
+  text-transform: capitalize;
+  border-radius: 5px;
+  cursor: pointer;
 
-    // &:active,
-    // &:focus,
-    // &:active:focus {
+  // &:active,
+  // &:focus,
+  // &:active:focus {
 
-    // }
+  // }
 
-    // &:hover {
+  // &:hover {
 
-    // }
+  // }
 
-    &:disabled {
-        cursor: default;
-    }
+  &:disabled {
+    cursor: default;
+  }
 }

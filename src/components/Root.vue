@@ -6,9 +6,9 @@
 import MainHeader from '@/components/MainHeader'
 
 export default {
-    name: 'Root',
-    components: {
-        MainHeader
-    }
+  name: 'Root',
+  components: {
+    MainHeader
+  }
 }
 </script>

@@ -5,7 +5,7 @@ button(v-on='$listeners', v-bind='$attrs')
 
 <script>
 export default {
-    name: 'BaseButton',
+  name: 'BaseButton'
 }
 </script>
 

@@ -8,11 +8,11 @@
 
 <script>
 export default {
-    name: 'User',
-    data: () => ({
-        user: {
-            name: 'Anastasyia'
-        }
-    })
+  name: 'User',
+  data: () => ({
+    user: {
+      name: 'Anastasyia'
+    }
+  })
 }
 </script>
