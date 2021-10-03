@@ -12,7 +12,6 @@ module.exports = {
   },
 
   devServer: {},
-
   runtimeCompiler: true,
 
   configureWebpack: {
@@ -59,5 +58,9 @@ module.exports = {
         data: '@import "@/scss/settings.scss";'
       }
     }
-  }
+  },
+
+  transpileDependencies: [
+    'vuetify'
+  ]
 }

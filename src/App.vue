@@ -1,47 +1,55 @@
-<template lang="pug">
-#app
-    Background
-    MainHeader
-    
-    nav
-        router-link(to='table') {{'TEXT'}}
-                
-    //- router-view
+<template>
+  <v-app>
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          transition="scale-transition"
+          width="40"
+        />
 
-    main.hl-main
+        <v-img
+          alt="Vuetify Name"
+          class="shrink mt-1 hidden-sm-and-down"
+          contain
+          min-width="100"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          width="100"
+        />
+      </div>
 
-    //- nav
-    //-     ul
-    //-         li {{ "NAV 1" }}
-    //-         li {{ "NAV 2" }}
-    //-         li {{ "NAV 3" }}
+      <v-spacer></v-spacer>
 
-//- 
-//- <div class="sidebar">
-//-         <aside>
-//-             <h1>Widget title</h1>
-//-             ...
-//-         </aside>
-//- </div>
-//- footer
+      <v-btn
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Latest Release</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import MainHeader from '@/components/MainHeader'
-import Background from '@/components/Background'
 
 export default {
   name: 'App',
-  components: {
-    MainHeader,
-    Background
-  }
-}
+
+  data: () => ({
+    //
+  }),
+};
 </script>
-
-<style lang="scss">
-@import '@/assets/scss/base';
-
-// .hl-main {
-// }
-</style>

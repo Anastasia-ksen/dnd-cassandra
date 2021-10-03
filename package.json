@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "server": "node server/server.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "dev": "vue-cli-service build --mode development",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
+    "dev": "vue-cli-service build --mode development",
+    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
+    "server": "node server/server.js"
   },
   "dependencies": {
     "core-js": "^3.9.0",
@@ -51,6 +51,7 @@
     "vue-jest": "^3.0.7",
     "vue-loader": "^15.9.6",
     "vue-template-compiler": "^2.6.12",
+    "vuetify-loader": "^1.7.0",
     "webpack": "^4.0.0"
   }
 }
