@@ -4,11 +4,8 @@ import i18n from './i18n'
 import router from '@/router'
 
 import '@/components/_globals'
-import '@/components/_materials'
 import '@/_plugins'
-import '@/_materials'
 
-// import router from './router'
 // import store from './store'
 
 Vue.config.productionTip = false

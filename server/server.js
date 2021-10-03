@@ -48,7 +48,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(morgan('dev'))
 
 // import API
-app.use('/api/records', require('./routes/books'))
+app.use('/api/books', require('./routes/books'))
 
 const db = mongoose.connection
 db.on('error', () => {
